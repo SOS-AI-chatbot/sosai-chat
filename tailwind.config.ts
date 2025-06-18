@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Pastel theme colors
+				pastel: {
+					purple: '#E8D5FF',
+					pink: '#FFD1E8',
+					orange: '#FFB68A',
+					yellow: '#FFF4B3',
+					blue: '#B8E6FF',
+					green: '#B8FFB8',
+					lavender: '#E6E6FA',
+					peach: '#FFDAB9',
+					mint: '#F0FFF0',
+					cream: '#FFF8DC'
 				}
 			},
 			borderRadius: {
@@ -84,11 +98,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': { 
+						opacity: '0.4',
+						transform: 'scale(1)'
+					},
+					'50%': { 
+						opacity: '0.8',
+						transform: 'scale(1.05)'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-pastel': 'linear-gradient(135deg, #E8D5FF 0%, #FFD1E8 50%, #FFB68A 100%)',
+				'gradient-warm': 'linear-gradient(135deg, #FFF4B3 0%, #FFB68A 50%, #FFD1E8 100%)',
+				'gradient-cool': 'linear-gradient(135deg, #B8E6FF 0%, #E8D5FF 50%, #B8FFB8 100%)',
+				'gradient-glow': 'radial-gradient(circle, rgba(232, 213, 255, 0.3) 0%, rgba(255, 209, 232, 0.2) 50%, transparent 100%)'
 			}
 		}
 	},

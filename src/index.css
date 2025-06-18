@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,6 +99,61 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-pastel text-foreground min-h-screen;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(232, 213, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 182, 138, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 182, 138, 0.7);
+}
+
+/* Glow effects for floating elements */
+.glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb-1 {
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(232, 213, 255, 0.3) 0%, transparent 70%);
+  animation: glow 4s ease-in-out infinite, float 8s ease-in-out infinite;
+}
+
+.glow-orb-2 {
+  top: 60%;
+  right: 10%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(255, 209, 232, 0.3) 0%, transparent 70%);
+  animation: glow 3s ease-in-out infinite reverse, float 6s ease-in-out infinite reverse;
+}
+
+.glow-orb-3 {
+  bottom: 20%;
+  left: 20%;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255, 182, 138, 0.3) 0%, transparent 70%);
+  animation: glow 5s ease-in-out infinite, float 7s ease-in-out infinite;
 }
