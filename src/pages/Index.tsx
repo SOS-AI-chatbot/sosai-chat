@@ -9,7 +9,9 @@ const Index = () => {
       <div className="glow-orb glow-orb-2"></div>
       <div className="glow-orb glow-orb-3"></div>
       
-      <ChatInterface />
+      <div className="h-screen">
+        <ChatInterface />
+      </div>
     </div>
   );
 };
